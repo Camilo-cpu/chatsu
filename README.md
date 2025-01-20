@@ -1,8 +1,8 @@
 # ChatBot Proyecto con Next.js, OpenAI y Shadcn
 
-# Juan Camilo Franco Gonzalez, INGENIERO DE SISTEMAS
+### Juan Camilo Franco Gonzalez, INGENIERO DE SISTEMAS
 
-# El archivo Chatsu Test.mp4 es un video representativo del Codigo Funcionando
+El archivo **Chatsu Test.mp4** es un video representativo del código funcionando.
 
 Este es un proyecto de chat interactivo utilizando **Next.js**, **OpenAI** y componentes de UI de **Shadcn**. El chatbot permite a los usuarios interactuar con un modelo de lenguaje AI, y la interfaz está construida utilizando componentes modernos de Shadcn para una experiencia agradable.
 
@@ -24,8 +24,8 @@ Antes de ejecutar el proyecto, asegúrate de tener los siguientes requisitos ins
    Si aún no has clonado el proyecto, usa el siguiente comando en tu terminal:
 
    ```bash
-   git clone <URL_del_repositorio>
-   cd <nombre_del_repositorio>
+   git clone https://github.com/Camilo-cpu/chatsu.git
+   cd chatsu
 Instalar las dependencias: Luego, instala las dependencias necesarias para el proyecto ejecutando:
 
 bash
@@ -39,7 +39,7 @@ Añade la clave en el archivo .env de la siguiente forma:
 env
 Copiar código
 OPENAI_API_KEY=tu_clave_api_aqui
-Instalar y configurar Shadcn: Shadcn te proporciona componentes preconstruidos para hacer que tu aplicación luzca más profesional. Asegúrate de haber ejecutado estos comandos para integrar los componentes necesarios:
+Instalar y configurar Shadcn: Shadcn proporciona componentes preconstruidos para hacer que tu aplicación luzca más profesional. Asegúrate de haber ejecutado estos comandos para integrar los componentes necesarios:
 
 bash
 Copiar código
@@ -87,25 +87,34 @@ Este proyecto permite a los usuarios interactuar con un Chatbot basado en el mod
 Componente ChatBox.tsx: Muestra el historial de mensajes y la interfaz para enviar nuevos mensajes.
 Componente Mensaje.tsx: Muestra cada mensaje del usuario o del asistente, con soporte para formateo HTML si es necesario.
 Componente ChatForm.tsx: Formulario para que el usuario ingrese un mensaje, que luego es enviado a la API de OpenAI para obtener una respuesta.
-Interacción con OpenAI
-Cada mensaje del usuario es enviado a la API de OpenAI, que devuelve una respuesta que se muestra en la interfaz de usuario. El chatbot está diseñado para hacer sentir al usuario especial y siempre darle la mejor solución.
-
 ⚙️ Comandos Útiles
 Instalar las dependencias:
+
+bash
+Copiar código
 npm install
-
 Iniciar el servidor de desarrollo:
-# npm run dev
 
+bash
+Copiar código
+npm run dev
 Ejecutar la aplicación en producción:
-npm run build y luego npm start
 
+bash
+Copiar código
+npm run build
+npm start
 📢 Notas
 Seguridad: No compartas tu clave API de OpenAI públicamente. Usa el archivo .env para mantener las claves seguras.
 Configuración de OpenAI: Si deseas modificar el modelo o la configuración de la API de OpenAI, puedes hacerlo en el archivo lib/actions.openai.ts, que maneja la lógica para interactuar con la API.
 🤝 Contribuciones
 Las contribuciones son bienvenidas. Si tienes ideas para mejorar el proyecto o deseas reportar un problema, por favor abre un "issue" o envía un "pull request".
-Contribuciones
-Las contribuciones son bienvenidas. Si tienes sugerencias o mejoras, no dudes en abrir un "issue" o enviar un "pull request".
 
+yaml
+Copiar código
 
+---
+
+Este archivo `README.md` está estructurado de forma clara para que cualquier persona pueda seguir los pasos sin problemas. Contiene la información necesaria para clonar el repositorio, instalar dependencias, configurar las claves API y ejecutar el proyecto de manera sencilla.
+
+¡Espero que te sea útil! Si necesitas algo más, no dudes en preguntarme.
