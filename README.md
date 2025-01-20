@@ -1,5 +1,7 @@
 # ChatBot Proyecto con Next.js, OpenAI y Shadcn
 
+#Juan Camilo Franco Gonzalez, INGENIERO DE SISTEMAS
+
 Este es un proyecto de chat interactivo utilizando **Next.js**, **OpenAI** y componentes de UI de **Shadcn**. El chatbot permite a los usuarios interactuar con un modelo de lenguaje AI, y la interfaz está construida utilizando componentes modernos de Shadcn para una experiencia agradable.
 
 ---
