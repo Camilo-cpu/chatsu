@@ -28,39 +28,32 @@ Antes de ejecutar el proyecto, asegúrate de tener los siguientes requisitos ins
    cd chatsu
 Instalar las dependencias: Luego, instala las dependencias necesarias para el proyecto ejecutando:
 
-bash
-Copiar código
 npm install
+
 Configurar la API de OpenAI:
 
-Crea un archivo .env en la raíz de tu proyecto.
-Obtén tu API Key de OpenAI desde OpenAI API.
-Añade la clave en el archivo .env de la siguiente forma:
-env
-Copiar código
-OPENAI_API_KEY=tu_clave_api_aqui
+*Crea un archivo .env en la raíz de tu proyecto.
+*Obtén tu API Key de OpenAI desde OpenAI API.
+*Añade la clave en el archivo .env de la siguiente forma: OPENAI_API_KEY=tu_clave_api_aqui
+
 Instalar y configurar Shadcn: Shadcn proporciona componentes preconstruidos para hacer que tu aplicación luzca más profesional. Asegúrate de haber ejecutado estos comandos para integrar los componentes necesarios:
 
-bash
-Copiar código
-npx shadcn@latest init
-npx shadcn@latest add button
-npx shadcn@latest add form
-npx shadcn@latest add input
-npx shadcn@latest add textarea
+*npx shadcn@latest init
+*npx shadcn@latest add button
+*npx shadcn@latest add form
+*npx shadcn@latest add input
+*npx shadcn@latest add textarea
+
 🚧 Ejecutar el Proyecto
 Para iniciar el proyecto en modo de desarrollo, utiliza el siguiente comando:
 
-bash
-Copiar código
-npm run dev
+*npm run dev
+
 Esto iniciará el servidor de desarrollo. Puedes acceder a la aplicación en tu navegador visitando http://localhost:3000.
 
 📁 Estructura del Proyecto
 La estructura de carpetas del proyecto es la siguiente:
 
-bash
-Copiar código
 /my-chatbot
 ├── /components
 │   ├── ChatBox.tsx       # Componente principal para mostrar el chat
@@ -75,46 +68,33 @@ Copiar código
 ├── .env                  # Archivo para almacenar las variables de entorno
 ├── package.json          # Dependencias y scripts del proyecto
 └── README.md             # Este archivo
+
 🔑 Variables de Entorno
 El archivo .env es crucial para almacenar configuraciones sensibles como la clave API de OpenAI. Aquí está el formato básico para agregar tu clave API en el archivo .env:
 
-env
-Copiar código
 OPENAI_API_KEY=tu_clave_api_aqui
+
 📝 Cómo Funciona
 Este proyecto permite a los usuarios interactuar con un Chatbot basado en el modelo GPT-4 de OpenAI. La conversación se maneja en un estado de historial de mensajes que se mantiene a lo largo de la sesión.
 
-Componente ChatBox.tsx: Muestra el historial de mensajes y la interfaz para enviar nuevos mensajes.
-Componente Mensaje.tsx: Muestra cada mensaje del usuario o del asistente, con soporte para formateo HTML si es necesario.
-Componente ChatForm.tsx: Formulario para que el usuario ingrese un mensaje, que luego es enviado a la API de OpenAI para obtener una respuesta.
+*Componente ChatBox.tsx: Muestra el historial de mensajes y la interfaz para enviar nuevos mensajes.
+*Componente Mensaje.tsx: Muestra cada mensaje del usuario o del asistente, con soporte para formateo HTML si es necesario.
+*Componente ChatForm.tsx: Formulario para que el usuario ingrese un mensaje, que luego es enviado a la API de OpenAI para obtener una respuesta.
 ⚙️ Comandos Útiles
 Instalar las dependencias:
-
-bash
-Copiar código
-npm install
+* npm install
 Iniciar el servidor de desarrollo:
-
-bash
-Copiar código
-npm run dev
+* npm run dev
 Ejecutar la aplicación en producción:
+*npm run build
+*npm start
 
-bash
-Copiar código
-npm run build
-npm start
 📢 Notas
 Seguridad: No compartas tu clave API de OpenAI públicamente. Usa el archivo .env para mantener las claves seguras.
 Configuración de OpenAI: Si deseas modificar el modelo o la configuración de la API de OpenAI, puedes hacerlo en el archivo lib/actions.openai.ts, que maneja la lógica para interactuar con la API.
 🤝 Contribuciones
 Las contribuciones son bienvenidas. Si tienes ideas para mejorar el proyecto o deseas reportar un problema, por favor abre un "issue" o envía un "pull request".
 
-yaml
-Copiar código
 
----
 
-Este archivo `README.md` está estructurado de forma clara para que cualquier persona pueda seguir los pasos sin problemas. Contiene la información necesaria para clonar el repositorio, instalar dependencias, configurar las claves API y ejecutar el proyecto de manera sencilla.
 
-¡Espero que te sea útil! Si necesitas algo más, no dudes en preguntarme.
