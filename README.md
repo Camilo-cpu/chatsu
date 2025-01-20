@@ -93,7 +93,7 @@ Instalar las dependencias:
 npm install
 
 Iniciar el servidor de desarrollo:
-npm run dev
+# npm run dev
 
 Ejecutar la aplicación en producción:
 npm run build y luego npm start
