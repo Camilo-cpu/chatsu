@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ChatBot Proyecto con Next.js, OpenAI y Shadcn
 
-## Getting Started
+# Juan Camilo Franco Gonzalez, INGENIERO DE SISTEMAS
 
-First, run the development server:
+Este es un proyecto de chat interactivo utilizando **Next.js**, **OpenAI** y componentes de UI de **Shadcn**. El chatbot permite a los usuarios interactuar con un modelo de lenguaje AI, y la interfaz está construida utilizando componentes modernos de Shadcn para una experiencia agradable.
 
-```bash
+---
+
+## 📋 Requisitos
+
+Antes de ejecutar el proyecto, asegúrate de tener los siguientes requisitos instalados en tu máquina:
+
+- **Node.js** v16 o superior: [Descargar Node.js](https://nodejs.org/)
+- **npm** o **yarn** para gestionar dependencias.
+- **API Key de OpenAI**: Puedes obtenerla en [OpenAI](https://beta.openai.com/signup/).
+
+---
+
+## 🚀 Instalación
+
+1. **Clonar el repositorio**:
+   Si aún no has clonado el proyecto, usa el siguiente comando en tu terminal:
+
+   ```bash
+   git clone <URL_del_repositorio>
+   cd <nombre_del_repositorio>
+Instalar las dependencias: Luego, instala las dependencias necesarias para el proyecto ejecutando:
+
+bash
+Copiar código
+npm install
+Configurar la API de OpenAI:
+
+Crea un archivo .env en la raíz de tu proyecto.
+Obtén tu API Key de OpenAI desde OpenAI API.
+Añade la clave en el archivo .env de la siguiente forma:
+env
+Copiar código
+OPENAI_API_KEY=tu_clave_api_aqui
+Instalar y configurar Shadcn: Shadcn te proporciona componentes preconstruidos para hacer que tu aplicación luzca más profesional. Asegúrate de haber ejecutado estos comandos para integrar los componentes necesarios:
+
+bash
+Copiar código
+npx shadcn@latest init
+npx shadcn@latest add button
+npx shadcn@latest add form
+npx shadcn@latest add input
+npx shadcn@latest add textarea
+🚧 Ejecutar el Proyecto
+Para iniciar el proyecto en modo de desarrollo, utiliza el siguiente comando:
+
+bash
+Copiar código
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Esto iniciará el servidor de desarrollo. Puedes acceder a la aplicación en tu navegador visitando http://localhost:3000.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📁 Estructura del Proyecto
+La estructura de carpetas del proyecto es la siguiente:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+bash
+Copiar código
+/my-chatbot
+├── /components
+│   ├── ChatBox.tsx       # Componente principal para mostrar el chat
+│   ├── ChatForm.tsx      # Formulario para enviar nuevos mensajes
+│   ├── Mensaje.tsx       # Componente para mostrar cada mensaje
+│   └── UI Components     # Componentes de UI personalizados como Botón, Entrada, etc.
+├── /lib
+│   ├── actions.openai.ts # Función para interactuar con la API de OpenAI
+├── /pages
+│   ├── api
+│   └── index.tsx         # Página principal donde se muestra el chat
+├── .env                  # Archivo para almacenar las variables de entorno
+├── package.json          # Dependencias y scripts del proyecto
+└── README.md             # Este archivo
+🔑 Variables de Entorno
+El archivo .env es crucial para almacenar configuraciones sensibles como la clave API de OpenAI. Aquí está el formato básico para agregar tu clave API en el archivo .env:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+env
+Copiar código
+OPENAI_API_KEY=tu_clave_api_aqui
+📝 Cómo Funciona
+Este proyecto permite a los usuarios interactuar con un Chatbot basado en el modelo GPT-4 de OpenAI. La conversación se maneja en un estado de historial de mensajes que se mantiene a lo largo de la sesión.
 
-## Learn More
+Componente ChatBox.tsx: Muestra el historial de mensajes y la interfaz para enviar nuevos mensajes.
+Componente Mensaje.tsx: Muestra cada mensaje del usuario o del asistente, con soporte para formateo HTML si es necesario.
+Componente ChatForm.tsx: Formulario para que el usuario ingrese un mensaje, que luego es enviado a la API de OpenAI para obtener una respuesta.
+Interacción con OpenAI
+Cada mensaje del usuario es enviado a la API de OpenAI, que devuelve una respuesta que se muestra en la interfaz de usuario. El chatbot está diseñado para hacer sentir al usuario especial y siempre darle la mejor solución.
 
-To learn more about Next.js, take a look at the following resources:
+⚙️ Comandos Útiles
+Instalar las dependencias:
+npm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Iniciar el servidor de desarrollo:
+npm run dev
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Ejecutar la aplicación en producción:
+npm run build y luego npm start
 
-## Deploy on Vercel
+📢 Notas
+Seguridad: No compartas tu clave API de OpenAI públicamente. Usa el archivo .env para mantener las claves seguras.
+Configuración de OpenAI: Si deseas modificar el modelo o la configuración de la API de OpenAI, puedes hacerlo en el archivo lib/actions.openai.ts, que maneja la lógica para interactuar con la API.
+🤝 Contribuciones
+Las contribuciones son bienvenidas. Si tienes ideas para mejorar el proyecto o deseas reportar un problema, por favor abre un "issue" o envía un "pull request".
+Contribuciones
+Las contribuciones son bienvenidas. Si tienes sugerencias o mejoras, no dudes en abrir un "issue" o enviar un "pull request".
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
